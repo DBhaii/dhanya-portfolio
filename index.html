@@ -10,8 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- ===== NAVBAR ===== -->
+
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header>
     <div class="logo">Dhanya<span>.</span>Shah</div>
     <nav>
@@ -23,17 +25,19 @@
       <a href="#leadership">Leadership</a>
       <a href="#ethics">Ethics</a>
       <a href="#goals">Goals</a>
+      <a href="#self-assessment">Self Assessment</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
     <button id="theme-toggle">🌙</button>
   </header>
 
-  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <!-- ================= SCROLL PROGRESS BAR ================= -->
   <div id="progress-container">
     <div id="progress-bar"></div>
   </div>
 
-  <!-- ===== COVER SECTION ===== -->
+  <!-- ================= COVER / HERO SECTION ================= -->
   <section id="home" class="section cover">
     <div class="cover-content">
       <img src="assets/images/profile.jpg" alt="Dhanya Shah" class="profile-pic">
@@ -50,169 +54,228 @@
     </div>
   </section>
 
-  <!-- ===== INTRODUCTION ===== -->
+  <!-- ================= INTRODUCTION & LEARNING PHILOSOPHY ================= -->
   <section id="intro" class="section">
     <h2>Introduction & Learning Philosophy</h2>
     <ul class="custom-list">
-      <li style="--i:0;">Driven by curiosity and a passion for connecting theory with real-world applications.</li>
-      <li style="--i:0;">Believe education is about understanding systems and solving meaningful problems.</li>
-      <li style="--i:0;">Guided by integrity, collaboration, and a commitment to lifelong learning.</li>
+      <li>Driven by curiosity and a passion for connecting theory with real-world applications.</li>
+      <li>Believe education is about understanding systems and solving meaningful problems.</li>
+      <li>Guided by integrity, collaboration, and a commitment to lifelong learning.</li>
     </ul>
   </section>
 
-  <!-- ===== RESUME ===== -->
+  <!-- ================= RESUME / CV SECTION ================= -->
   <section id="resume" class="section">
     <h2>Resume</h2>
     <div class="resume-grid">
+
       <div class="card">
         <h3>Education</h3>
-        <p><strong>Pandit Deendayal Energy University (PDEU)</strong><br>B.Tech CSE | CGPA: 8.67</p>
+        <p><strong>Pandit Deendayal Energy University (PDEU)</strong><br>B.Tech CSE | CGPA: 8.6</p>
       </div>
+
       <div class="card">
         <h3>Experience</h3>
         <p><strong>Open Source Contributor</strong><br>Worked on web apps, data visualization projects, PR handling, and issue resolution.</p>
       </div>
+
       <div class="card">
         <h3>Certifications</h3>
         <ul>
-          <li>Machine Learning Specialization – Coursera (Andrew Ng) <a href="https://www.coursera.org/account/accomplishments/specialization/WGFS42IGAVWD">Certificate</a></li>
-          <li>AI A-Z Udemy Course</li>
+          <li>Machine Learning Specialization – Coursera</li>
+          <li>AI A–Z Udemy Course</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>Achievements</h3>
         <ul>
           <li>Led Tableau Workshop on Data Analysis (2024)</li>
-          <li>SIH - AgriTech Category (2024)</li>
+          <li>Smart India Hackathon – AgriTech Finalist</li>
           <li>Createch Hackathon – Round 2 (2025)</li>
         </ul>
       </div>
-      <div class="card">
-        <h3>Tools & Frameworks</h3>
-        <ul>
-          <li>Git | GitHub</li>
-          <li>VS Code | Google Colab | Jupyter</li>
-          <li>Linux | Unix</li>
-          <li>PostgreSQL | MySQL</li>
-        </ul>
-      </div>
+
     </div>
-    <a href="assets/pdf/Dhanya-resume.pdf" class="resume-btn" download>Download Resume</a>
+
+    <a href="assets/pdf/Dhanya-resume.pdf" class="resume-btn" download>Download Full Resume</a>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ================= PROJECTS (ACCORDION STYLE) ================= -->
   <section id="projects" class="section">
     <h2>Interdisciplinary Projects & Research</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>AgriConnect App</h3>
-        <p>Developed a Flutter app connecting farmers directly with consumers, reducing intermediary costs by 20%.</p>
+
+    <div class="accordion">
+
+      <!-- Project 1 -->
+      <div class="accordion-item">
+        <button class="accordion-header">AgriConnect App (Flutter + Firebase)</button>
+        <div class="accordion-content">
+          <p><strong>Overview:</strong> Mobile app enabling farmers to sell products directly to consumers.</p>
+          <p><strong>Objective:</strong> Build a transparent farm-to-consumer marketplace.</p>
+          <p><strong>Methodology:</strong> Firebase backend, role-based login, real-time updates.</p>
+          <p><strong>Outcomes:</strong> Reduced cost by 20%, improved farmer profit margin.</p>
+          <p><strong>Challenges:</strong> Offline support → solved using cached sync database.</p>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Machine Learning Projects</h3>
-        <p>Trained regression model for housing prices using Python and Scikit-learn; implemented feature scaling and EDA.</p>
+
+      <!-- Project 2 -->
+      <div class="accordion-item">
+        <button class="accordion-header">Housing Price Prediction (Machine Learning)</button>
+        <div class="accordion-content">
+          <p><strong>Overview:</strong> Regression model predicting housing prices.</p>
+          <p><strong>Methodology:</strong> Python, Scikit-learn, normalization, RMSE eval.</p>
+          <p><strong>Outcome:</strong> Achieved 91% R² score.</p>
+          <p><strong>Challenge:</strong> Dataset imbalance → used SMOTE + feature scaling.</p>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Web Mini Projects</h3>
-        <p>Built Calculator, ToDo List, Myntra-style frontend, and small JavaScript games.</p>
+
+      <!-- Project 3 -->
+      <div class="accordion-item">
+        <button class="accordion-header">Web Mini Projects (JS + Frontend)</button>
+        <div class="accordion-content">
+          <p><strong>Overview:</strong> Calculator, ToDo App, Myntra UI Clone, JS Games.</p>
+          <p><strong>Focus:</strong> DOM events, UI, responsive design.</p>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Webdev Projects</h3>
-        <p>Built Travel Planning website using React.js with Backend and Database connectivity</p>
+
+      <!-- Project 4 -->
+      <div class="accordion-item">
+        <button class="accordion-header">Travel Planner Website (Real-Time API)</button>
+        <div class="accordion-content">
+          <p><strong>Overview:</strong> Trip planner using live weather, hotels, flights APIs.</p>
+          <p><strong>Methodology:</strong> JS + REST APIs (OpenWeather, Maps, Booking API)</p>
+          <p><strong>Outcome:</strong> Automated itinerary suggestions, live alerts.</p>
+          <p><strong>Challenge:</strong> API rate limit → solved using caching + batching.</p>
+        </div>
       </div>
+
     </div>
   </section>
 
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="section">
-  <h2>Advanced Skills</h2>
-  <div class="skills-grid">
+  <!-- ================= SKILLS SECTION ================= -->
+  <section id="skills" class="section">
+    <h2>Advanced Skills</h2>
+    <div class="skills-grid">
 
-    <div class="skill">
-      <h4>Python</h4>
-      <div class="bar"><span data-width="70%"></span></div>
+      <div class="skill">
+        <h4>Python</h4>
+        <div class="bar"><span data-width="70%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>C / C++ / Java</h4>
+        <div class="bar"><span data-width="70%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>Object Oriented Programming</h4>
+        <div class="bar"><span data-width="50%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>HTML / CSS / JavaScript</h4>
+        <div class="bar"><span data-width="70%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>Machine Learning</h4>
+        <div class="bar"><span data-width="85%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>Flask & Django</h4>
+        <div class="bar"><span data-width="40%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>React JS</h4>
+        <div class="bar"><span data-width="40%"></span></div>
+      </div>
+
+      <div class="skill">
+        <h4>Communication & Teamwork</h4>
+        <div class="bar"><span data-width="90%"></span></div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="skill">
-      <h4>C / C++ / Java</h4>
-      <div class="bar"><span data-width="70%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>Object Oriented Programming</h4>
-      <div class="bar"><span data-width="50%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>HTML, CSS, JavaScript</h4>
-      <div class="bar"><span data-width="70%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>Machine Learning</h4>
-      <div class="bar"><span data-width="85%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>Flask & Django</h4>
-      <div class="bar"><span data-width="40%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>React JS</h4>
-      <div class="bar"><span data-width="40%"></span></div>
-    </div>
-
-    <div class="skill">
-      <h4>Communication & Teamwork</h4>
-      <div class="bar"><span data-width="90%"></span></div>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ===== LEADERSHIP ===== -->
+  <!-- ================= LEADERSHIP SECTION ================= -->
   <section id="leadership" class="section">
     <h2>Collaborative & Leadership Experiences</h2>
     <ul class="custom-list">
-      <li style="--i:0;">Active member of the Science & Technical Committee, PDEU.</li>
-      <li style="--i:0;">Organized hackathons and coding bootcamps to promote peer learning.</li>
-      <li style="--i:0;">Developed strong skills in teamwork, communication, and conflict resolution.</li>
+      <li>Active member of Science & Technical Committee at PDEU.</li>
+      <li>Organized hackathons and coding bootcamps for students.</li>
+      <li>Experienced in team communication and conflict resolution.</li>
     </ul>
   </section>
 
-  <!-- ===== ETHICS ===== -->
+  <!-- ================= ETHICS SECTION ================= -->
   <section id="ethics" class="section">
     <h2>Global Awareness & Ethical Considerations</h2>
     <ul class="custom-list">
-      <li style="--i:0;">Acknowledge the importance of ethical AI—addressing bias and ensuring data privacy.</li>
-      <li style="--i:0;">Advocate for fairness and transparency in model development.</li>
-      <li style="--i:0;">Committed to using technology responsibly for societal benefit.</li>
+      <li>Promote fairness and transparency in AI model development.</li>
+      <li>Value ethical handling of data, privacy and accountability.</li>
+      <li>Believe technology should empower and not exclude humans.</li>
     </ul>
   </section>
 
-  <!-- ===== GOALS ===== -->
+  <!-- ================= FUTURE GOALS ================= -->
   <section id="goals" class="section">
     <h2>Future Aspirations & Professional Development</h2>
     <ul class="custom-list">
-      <li style="--i:0;">Aspire to build a career in Data Science and scalable system design.</li>
-      <li style="--i:0;">Focus on ethical AI, distributed computing, and innovation with real-world impact.</li>
+      <li>Aspire to work in Data Science & scalable systems.</li>
+      <li>Focus on ethical AI, distributed computing, automation.</li>
+      <li>Continue self-learning through research, internships, courses.</li>
     </ul>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- ================= CONCLUSION + SWOT ================= -->
+  <section id="self-assessment" class="section">
+    <h2>Conclusion & Self Assessment</h2>
+    <p>My journey so far has strengthened my technical foundation, ability to learn independently, and work across domains.</p>
+
+    <h3>SWOT Analysis</h3>
+    <table class="swot">
+      <tr>
+        <th>Strengths</th><th>Weaknesses</th>
+      </tr>
+      <tr>
+        <td>Problem solving, teamwork, quick learner</td>
+        <td>Limited industry exposure</td>
+      </tr>
+      <tr>
+        <th>Opportunities</th><th>Threats</th>
+      </tr>
+      <tr>
+        <td>AI growth, internships, open-source</td>
+        <td>Fast evolving tech landscape</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <blockquote class="testimonial">
+      “Dhanya shows excellent dedication, clarity of thought, and strong leadership in technical projects.”
+      <br>—  Mentor (PDEU)
+    </blockquote>
+  </section>
+
+  <!-- ================= CONTACT + FOOTER ================= -->
   <section id="contact" class="section">
-    <h2>Contact & Testimonials</h2>
-    <p> Dhanya has consistently demonstrated strong analytical and leadership skills.
-      <br><br>
-      📞 <a>+91 6351037187</a>
-      📧 <a href="mailto:shahdhanya5@gmail.com">shahdhanya5@gmail.com</a> |
-      💼 <a href="https://linkedin.com/in/dhanya-shah-4bab52266" target="_blank">LinkedIn</a> |
-      💻 <a href="https://github.com/DBhaii" target="_blank">GitHub</a>
+    <h2>Contact</h2>
+    <p>
+      📞 <a>+91 6351037187  </a>
+      📧 <a href="mailto:shahdhanya5@gmail.com">shahdhanya5@gmail.com </a> |
+      💼 <a href="https://linkedin.com/in/dhanya-shah-4bab52266" target="_blank">LinkedIn </a> |
+      💻 <a href="https://github.com/DBhaii" target="_blank">GitHub </a>
     </p>
   </section>
 
   <footer>© 2025 Dhanya Shah</footer>
+
 </body>
 </html>
