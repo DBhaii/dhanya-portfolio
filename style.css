@@ -49,16 +49,7 @@ header {
 .logo span {
   color: var(--accent);
 }
-nav a {
-  color: var(--text-color);
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-nav a:hover {
-  color: var(--accent);
-}
+
 #theme-toggle {
   background: var(--accent);
   border: none;
@@ -66,6 +57,70 @@ nav a:hover {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* ==========================================
+   TWO-LINE NAVBAR STYLING
+========================================== */
+.nav-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  gap: 6px;
+}
+
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-row a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-row a:hover {
+  color: var(--accent);
+}
+
+/* underline animation for hover */
+.nav-row a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-row a:hover::after {
+  width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .nav-row {
+    gap: 10px;
+  }
+  #theme-toggle {
+    margin-top: 8px;
+  }
+}
+
 
 /* ==========================================
    SCROLL PROGRESS BAR
